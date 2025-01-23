@@ -17,6 +17,7 @@
 - &check; Lógica para salvar knights deletados na coleção *heros*
 - &check; Adicionar parametro filter=heroes para rota /knight
 - &#x2610; Adicionar Exception filters ao controller de knights
+- &#x2610; Criar teste unitários 
 
 ## Descrição
 
