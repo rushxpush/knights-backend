@@ -15,8 +15,8 @@
 - &check; Configuração do Mongoose
 - &check; CRUD da rota /knights
 - &check; Lógica para salvar knights deletados na coleção *heros*
+- &check; Adicionar parametro filter=heroes para rota /knight
 - &#x2610; Adicionar Exception filters ao controller de knights
-- &#x2610; Adicionar parametro filter=heroes para rota /knight
 
 ## Descrição
 
