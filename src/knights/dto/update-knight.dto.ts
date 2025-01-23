@@ -1,4 +1,7 @@
-import { PartialType } from '@nestjs/mapped-types';
-import { CreateKnightDto } from './create-knight.dto';
+import { IsNotEmpty, IsString } from 'class-validator';
 
-export class UpdateKnightDto extends PartialType(CreateKnightDto) {}
+export class UpdateKnightDto {
+  @IsString()
+  @IsNotEmpty()
+  nickname: string;
+}

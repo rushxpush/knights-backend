@@ -17,6 +17,7 @@ export class KnightsController {
 
   @Post()
   create(@Body() createKnightDto: CreateKnightDto) {
+    console.log(createKnightDto);
     return this.knightsService.create(createKnightDto);
   }
 
@@ -26,17 +27,17 @@ export class KnightsController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.knightsService.findOne(+id);
+  findOne(@Param('id') _id: string) {
+    return this.knightsService.findOne(_id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateKnightDto: UpdateKnightDto) {
-    return this.knightsService.update(+id, updateKnightDto);
+  update(@Param('id') _id: string, @Body() updateKnightDto: UpdateKnightDto) {
+    return this.knightsService.update(_id, updateKnightDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.knightsService.remove(+id);
+  remove(@Param('id') _id: string) {
+    return this.knightsService.remove(_id);
   }
 }

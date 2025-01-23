@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
 import { Weapon } from '../interfaces/weapon.interface';
-import { Attributes } from '../interfaces/Attributes.interface';
+import { Attributes } from '../interfaces/attributes.interface';
 
 export type KnightDocument = HydratedDocument<Knight>;
 
