@@ -4,6 +4,7 @@ import { KnightsController } from './knights.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Knight, KnightSchema } from './models/knights.schema';
 import { HeroesModule } from 'src/heroes/heroes.module';
+import { KnightsCalculationProvider } from './providers/knights-calculation.provider';
 
 @Module({
   imports: [
@@ -11,6 +12,6 @@ import { HeroesModule } from 'src/heroes/heroes.module';
     HeroesModule,
   ],
   controllers: [KnightsController],
-  providers: [KnightsService],
+  providers: [KnightsService, KnightsCalculationProvider],
 })
 export class KnightsModule {}

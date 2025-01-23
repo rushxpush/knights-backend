@@ -16,8 +16,9 @@
 - &check; CRUD da rota /knights
 - &check; Lógica para salvar knights deletados na coleção *heros*
 - &check; Adicionar parametro filter=heroes para rota /knight
+- &check; Criar cálculos de 'Attack' e 'Experience' 
 - &#x2610; Adicionar Exception filters ao controller de knights
-- &#x2610; Criar teste unitários 
+- &#x2610; Criar testes unitários 
 
 ## Descrição
 
