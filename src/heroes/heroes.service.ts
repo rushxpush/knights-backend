@@ -13,6 +13,7 @@ export class HeroesService {
   async create(_id: string, createKnightDto: CreateKnightDto) {
     const createHeroObj = {
       ...createKnightDto,
+      isHero: true,
       _id,
     };
     return this.heroModel.create(createHeroObj);
