@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { KnightsService } from './knights.service';
 import { CreateKnightDto } from './dto/create-knight.dto';
@@ -22,7 +23,11 @@ export class KnightsController {
   }
 
   @Get()
-  findAll() {
+  findAll(@Query('filter') filter?: string) {
+    if (filter === 'heroes') {
+      return this.knightsService.findAllHeroes();
+    }
+
     return this.knightsService.findAll();
   }
 

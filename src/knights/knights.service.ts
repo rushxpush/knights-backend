@@ -22,6 +22,10 @@ export class KnightsService {
     return this.knightModel.find();
   }
 
+  findAllHeroes() {
+    return this.heroesService.findAll();
+  }
+
   findOne(_id: string) {
     return this.knightModel.findById({ _id });
   }

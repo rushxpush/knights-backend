@@ -18,4 +18,8 @@ export class HeroesService {
     };
     return this.heroModel.create(createHeroObj);
   }
+
+  async findAll() {
+    return this.heroModel.find();
+  }
 }
