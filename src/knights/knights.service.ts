@@ -26,6 +26,7 @@ export class KnightsService {
       ...knight,
       experience: this.calcProvider.calculateExperience(knight),
       attack: this.calcProvider.calculateAttack(knight),
+      age: this.calcProvider.calculateAge(knight),
     }));
   }
 
@@ -39,6 +40,7 @@ export class KnightsService {
       ...knight,
       experience: this.calcProvider.calculateExperience(knight),
       attack: this.calcProvider.calculateAttack(knight),
+      age: this.calcProvider.calculateAge(knight),
     };
   }
 
