@@ -1,4 +1,4 @@
-import { IsBoolean, IsNotEmpty, IsString } from 'class-validator';
+import { IsBoolean, IsNotEmpty, IsNumber, IsString } from 'class-validator';
 import { CreateKnightDto } from 'src/knights/dto/create-knight.dto';
 
 export class CreateHeroDto extends CreateKnightDto {
@@ -9,4 +9,8 @@ export class CreateHeroDto extends CreateKnightDto {
   @IsBoolean()
   @IsNotEmpty()
   isHero: boolean;
+
+  @IsNumber()
+  @IsNotEmpty()
+  age: number;
 }

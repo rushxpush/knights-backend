@@ -8,6 +8,15 @@ export type HeroDocument = HydratedDocument<Hero>;
 export class Hero extends Knight {
   @Prop()
   isHero: boolean;
+
+  @Prop()
+  age: number;
+
+  @Prop()
+  attack: number;
+
+  @Prop()
+  experience: number;
 }
 
 export const HeroSchema = SchemaFactory.createForClass(Hero);
