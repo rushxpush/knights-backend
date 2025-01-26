@@ -1,5 +1,5 @@
 export interface Attributes {
-  strenght: number;
+  strength: number;
   dexterity: number;
   constitution: number;
   intelligence: number;
