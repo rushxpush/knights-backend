@@ -18,7 +18,6 @@ export class KnightsController {
 
   @Post()
   create(@Body() createKnightDto: CreateKnightDto) {
-    console.log(createKnightDto);
     return this.knightsService.create(createKnightDto);
   }
 
