@@ -52,11 +52,28 @@ export class KnightsService {
     };
   }
 
-  update(_id: string, updateKnightDto: UpdateKnightDto) {
-    return this.knightModel.findOneAndUpdate(
+  async update(_id: string, updateKnightDto: UpdateKnightDto) {
+    if (!mongoose.Types.ObjectId.isValid(_id)) {
+      throw new HttpException('Formato de ID inválido', HttpStatus.BAD_REQUEST);
+    }
+
+    const knight = await this.knightModel.findOneAndUpdate(
       { _id },
       { $set: updateKnightDto },
     );
+
+    if (!knight) {
+      throw new HttpException('Cavaleiro não encontrado', HttpStatus.NOT_FOUND);
+    }
+
+    const updatedKnight = await this.knightModel.findById({ _id }).lean();
+
+    return {
+      ...updatedKnight,
+      experience: this.calcProvider.calculateExperience(knight),
+      attack: this.calcProvider.calculateAttack(knight),
+      age: this.calcProvider.calculateAge(knight),
+    };
   }
 
   async remove(_id: string) {
