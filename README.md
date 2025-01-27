@@ -23,8 +23,9 @@
 - &check; Dockerizar aplicação
 - &check; Testes unitários - KnightsController
 - &check; Testes unitários - KnightsService
-- &#x2610; Testes unitários - HeroesService
+- &check; Testes unitários - HeroesService
 - &#x2610; Testes unitários - KnightsCalculationProvider
+- &#x2610; Refatorar os stubs. Estão um pouco confusos e tem duplicatas 
 - &#x2610; Testes e2e
 - &#x2610; Aplicar os tipos do Typescript em todas as funções e variáveis que faltam
 
@@ -60,7 +61,7 @@ docker compose up --build
 
 5. Para rodar apenas os testes:
 ```bash
-docker compose up test
+docker compose --profile test up
 ```
 
 [Ir para o topo](#knights-challenge---backend)

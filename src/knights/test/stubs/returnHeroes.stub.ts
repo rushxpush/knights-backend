@@ -3,7 +3,7 @@ export const returnHeroesStub = () => {
     _id: '6791aa7758556afcc84d85a9',
     name: 'Napoleon',
     nickname: 'Nappy',
-    birthday: '1952-12-23T02:00:00.000Z',
+    birthday: new Date('1952-12-23T02:00:00.000Z'),
     weapons: [
       {
         name: 'sword',
