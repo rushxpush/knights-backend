@@ -8,5 +8,12 @@ services:
       - '3000:3000'
     volumes:
       - .:/usr/src/app
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm run test
+    volumes:
+      - .:/user/src/app
   mongo:
     image: mongo

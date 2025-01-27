@@ -59,6 +59,7 @@ describe('KnightsController', () => {
 
     knightsController = module.get<KnightsController>(KnightsController);
     knightsService = module.get<KnightsService>(KnightsService);
+
     jest.clearAllMocks();
   });
 
