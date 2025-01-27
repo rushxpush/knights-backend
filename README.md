@@ -31,7 +31,12 @@
 
 [Ir para o topo](#knights-challenge---backend)
 
-## Descrição
+## Descrição  
+
+Este se trata do backend de um desafio de programação que fiz para uma vaga de emprego. Infelizmente não tive tempo de implementar todos o testes unitários, mas em geral acredito que o backend ficou legal. Não me atentei em colocar 100% todos os tipos nas variáveis, funções e classes. Foquei principalmente em deixar o app funcional, como um mvp.
+
+O backend cuida principalmente de quatro funcionalidades principais. A criação de knights, o update do seu apelido, a remoção do banco e a criação de heróis a partir dos heróis removidos. A lógica mais "complicadinha" seria realizar o cáculo de experiência e ataque com base numa fórmula que leva em conta atributos principais do personagem, poder da arma e idade. 
+
 
 [Ir para o topo](#knights-challenge---backend)
 
@@ -50,7 +55,7 @@ docker compose up --build
 
 3. Não esqueça de montar a imagem do backend e rodar. Link: [knights-challenge-frontend](https://github.com/rushxpush/knights-frontend)
 
-4. Acesse a página em localhost:3000
+4. Acesse a página em [localhost:3000](http://localhost:3000)
 
 5. Para rodar apenas os testes:
 ```bash
