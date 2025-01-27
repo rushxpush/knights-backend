@@ -17,5 +17,3 @@ services:
     command: npm run test
     profiles:
       - test
-    volumes:
-      - .:/user/src/app
