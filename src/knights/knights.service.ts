@@ -77,11 +77,10 @@ export class KnightsService {
   }
 
   async remove(_id: string) {
-    const deletedKnight = await this.knightModel.findByIdAndDelete({ _id });
-    await this.heroesService.create(
-      _id,
-      deletedKnight.toJSON() as undefined as CreateHeroDto,
-    );
+    const deletedKnight = await this.knightModel
+      .findByIdAndDelete({ _id })
+      .lean();
+    await this.heroesService.create(_id, deletedKnight);
     return deletedKnight;
   }
 }
