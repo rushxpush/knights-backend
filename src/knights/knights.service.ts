@@ -77,9 +77,18 @@ export class KnightsService {
   }
 
   async remove(_id: string) {
+    if (!mongoose.Types.ObjectId.isValid(_id)) {
+      throw new HttpException('Formato de ID inválido', HttpStatus.BAD_REQUEST);
+    }
+
     const deletedKnight = await this.knightModel
       .findByIdAndDelete({ _id })
       .lean();
+
+    if (!deletedKnight) {
+      throw new HttpException('Cavaleiro não encontrado', HttpStatus.NOT_FOUND);
+    }
+
     await this.heroesService.create(_id, deletedKnight);
     return deletedKnight;
   }
