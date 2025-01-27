@@ -6,8 +6,6 @@ services:
     command: npm run start:dev
     ports:
       - '3000:3000'
-    volumes:
-      - .:/usr/src/app
   mongo:
     image: mongo
   test:
