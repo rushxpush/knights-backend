@@ -37,6 +37,7 @@ Este se trata do backend de um desafio de programação que fiz para uma vaga de
 
 O backend cuida principalmente de quatro funcionalidades principais. A criação de knights, o update do seu apelido, a remoção do banco e a criação de heróis a partir dos heróis removidos. A lógica mais "complicadinha" seria realizar o cáculo de experiência e ataque com base numa fórmula que leva em conta atributos principais do personagem, poder da arma e idade. 
 
+**Importante**: Se você der um refresh na rota /list, vai dar erro na página. Ainda não configurei o servidor para dar suporte ao Vue Router. Desculpe pelo inconveniente.
 
 [Ir para o topo](#knights-challenge---backend)
 
