@@ -24,6 +24,7 @@
 - &check; Testes unitários - KnightsController
 - &check; Testes unitários - KnightsService
 - &check; Testes unitários - HeroesService
+- &#x2610; Documentar rotas com swagger
 - &#x2610; Testes unitários - KnightsCalculationProvider
 - &#x2610; Refatorar os stubs. Estão um pouco confusos e tem duplicatas 
 - &#x2610; Testes e2e
@@ -34,7 +35,7 @@
 
 ## Descrição  
 
-Este se trata do backend de um desafio de programação que fiz para uma vaga de emprego. Infelizmente não tive tempo de implementar todos o testes unitários, mas em geral acredito que o backend ficou legal. Não me atentei em colocar 100% todos os tipos nas variáveis, funções e classes. Foquei principalmente em deixar o app funcional, como um mvp.
+Este se trata do backend de um desafio de programação que fiz para uma vaga de emprego. Infelizmente não tive tempo de implementar todos o testes unitários, mas em geral acredito que o backend ficou legal. Não me atentei em colocar 100% todos os tipos nas variáveis, funções e classes. Foquei principalmente em deixar o app funcional, como um mvp. Faltou colocar o swagger para as rotas também. 
 
 O backend cuida principalmente de quatro funcionalidades principais. A criação de knights, o update do seu apelido, a remoção do banco e a criação de heróis a partir dos heróis removidos. A lógica mais "complicadinha" seria realizar o cáculo de experiência e ataque com base numa fórmula que leva em conta atributos principais do personagem, poder da arma e idade. 
 
