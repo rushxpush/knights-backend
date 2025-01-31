@@ -5,9 +5,6 @@ import { Weapon } from '../interfaces/weapon.interface';
 @Injectable()
 export class KnightsCalculationProvider {
   calculateExperience(knight: Knight) {
-    // const birthYear: number = new Date(knight.birthday).getFullYear();
-    // const currentYear: number = new Date().getFullYear();
-    // const age: number = currentYear - birthYear;
     const age: number = this.calculateAge(knight);
 
     if (age < 7) return 0;
@@ -17,7 +14,7 @@ export class KnightsCalculationProvider {
 
   calculateAttack(knight: Knight) {
     const keyAttr: string = knight.keyAttribute;
-    const keyAttrValue: number = knight[keyAttr];
+    const keyAttrValue: number = knight.attributes[keyAttr];
 
     return (
       10 +
