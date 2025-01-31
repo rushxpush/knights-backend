@@ -24,8 +24,8 @@
 - &check; Testes unitários - KnightsController
 - &check; Testes unitários - KnightsService
 - &check; Testes unitários - HeroesService
+- &check; Testes unitários - KnightsCalculationProvider
 - &#x2610; Documentar rotas com swagger
-- &#x2610; Testes unitários - KnightsCalculationProvider
 - &#x2610; Refatorar os stubs. Estão um pouco confusos e tem duplicatas 
 - &#x2610; Testes e2e
 - &#x2610; Aplicar os tipos do Typescript em todas as funções e variáveis que faltam
