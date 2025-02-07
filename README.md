@@ -72,3 +72,14 @@ docker compose --profile test up
 Qualquer dúvida mande um email para [rafagarciadev@gmail.com](mailto:rafagarciadev@gmail.com)
 
 [Ir para o topo](#knights-challenge---backend)
+
+## Lista de bugs
+
+- &#x2610; Caso um knight seja salvo no banco e possua nenhuma arma equipada, todo método que chama o método calculateAttack vai dar erro 500.
+Implementar lógica para auto equipar primeira arma da array caso não haja armas equipadas.
+
+[Ir para o topo](#knights-challenge---backend)
+
+## Bugs Resolvidos
+
+[Ir para o topo](#knights-challenge---backend)

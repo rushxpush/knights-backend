@@ -33,7 +33,9 @@ export class KnightsCalculationProvider {
   }
 
   getEquippedWeaponModifier(weapons: Array<Weapon>): number {
-    const equippedWeapon: Weapon = weapons.find((weapon) => weapon.equipped);
+    const equippedWeapon: Weapon = weapons.find(
+      (weapon) => weapon.equipped === true,
+    );
     return equippedWeapon.mod;
   }
 
