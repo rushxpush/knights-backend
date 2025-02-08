@@ -3,11 +3,12 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { KnightsModule } from './knights/knights.module';
 import { MongooseModule } from '@nestjs/mongoose';
-import { AuthModule } from './auth/auth.module';
-import { UsersModule } from './users/users.module';
+// import { OldAuthModule } from './auth/oldauth.module';
+// import { UsersModule } from './users-service/users.module';
 import { ConfigModule } from '@nestjs/config';
-import { APP_GUARD } from '@nestjs/core';
-import { AuthGuard } from './auth/auth.guard';
+// import { APP_GUARD } from '@nestjs/core';
+// import { AuthGuard } from './auth/auth.guard';
+import { ClientsModule, Transport } from '@nestjs/microservices';
 
 @Module({
   imports: [
@@ -15,17 +16,28 @@ import { AuthGuard } from './auth/auth.guard';
     ConfigModule.forRoot({
       isGlobal: true,
     }),
+    ClientsModule.register([
+      {
+        name: 'AUTH_SERVICE',
+        transport: Transport.RMQ,
+        options: {
+          urls: ['amqp://localhost:5672'],
+          queue: 'auth_queue',
+          queueOptions: { durable: false },
+        },
+      },
+    ]),
     KnightsModule,
-    AuthModule,
-    UsersModule,
+    // OldAuthModule,
+    // UsersModule,
   ],
   controllers: [AppController],
   providers: [
     AppService,
-    {
-      provide: APP_GUARD,
-      useClass: AuthGuard,
-    },
+    // {
+    //   provide: APP_GUARD,
+    //   useClass: AuthGuard,
+    // },
   ],
 })
 export class AppModule {}

@@ -45,24 +45,7 @@
         "transient": false,
         "exported": true,
         "token": "DatabaseConnection",
-        "initTime": 40.44221099999993
-      }
-    },
-    "95355232": {
-      "id": "95355232",
-      "label": "JwtModule",
-      "parent": "-536515674",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "JwtModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "JwtModule",
-        "initTime": 21.009232999999995
+        "initTime": 53.527619000000186
       }
     },
     "203550704": {
@@ -78,7 +61,23 @@
         "transient": false,
         "exported": true,
         "token": "ExternalContextCreator",
-        "initTime": 27.476458999999977
+        "initTime": 24.26308700000004
+      }
+    },
+    "208334701": {
+      "id": "208334701",
+      "label": "ModuleRef",
+      "parent": "891985575",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ClientsModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ModuleRef"
       }
     },
     "211572259": {
@@ -105,7 +104,7 @@
         "transient": false,
         "exported": false,
         "token": "InternalCoreModule",
-        "initTime": 28.844406999999933
+        "initTime": 24.991123000000016
       }
     },
     "233936880": {
@@ -121,7 +120,7 @@
         "transient": false,
         "exported": false,
         "token": "AppController",
-        "initTime": 0.1767059999999674
+        "initTime": 0.8452409999999873
       }
     },
     "264711474": {
@@ -138,7 +137,7 @@
         "transient": false,
         "exported": false,
         "token": "MongooseModule",
-        "initTime": 26.99174199999993
+        "initTime": 24.111979999999903
       }
     },
     "303302557": {
@@ -167,22 +166,6 @@
         "internal": true
       }
     },
-    "603011239": {
-      "id": "603011239",
-      "label": "UsersService",
-      "parent": "-2003726489",
-      "metadata": {
-        "type": "provider",
-        "internal": false,
-        "sourceModuleName": "UsersModule",
-        "durable": false,
-        "static": true,
-        "transient": false,
-        "exported": true,
-        "token": "UsersService",
-        "initTime": 21.16703899999993
-      }
-    },
     "664692133": {
       "id": "664692133",
       "label": "KnightsModule",
@@ -206,12 +189,22 @@
         "transient": false,
         "exported": true,
         "token": "Reflector",
-        "initTime": 28.389189999999985
+        "initTime": 24.73941100000002
       }
     },
     "699745446": {
       "id": "699745446",
       "label": "MongooseModule",
+      "metadata": {
+        "type": "module",
+        "global": false,
+        "dynamic": true,
+        "internal": false
+      }
+    },
+    "891985575": {
+      "id": "891985575",
+      "label": "ClientsModule",
       "metadata": {
         "type": "module",
         "global": false,
@@ -264,7 +257,7 @@
         "transient": false,
         "exported": true,
         "token": "Symbol(CONFIG_SERVICE)",
-        "initTime": 27.96797600000002
+        "initTime": 24.704109000000017
       }
     },
     "953630632": {
@@ -281,7 +274,7 @@
         "transient": false,
         "exported": false,
         "token": "HeroesModule",
-        "initTime": 26.310318000000052
+        "initTime": 23.320641000000023
       }
     },
     "981404832": {
@@ -314,7 +307,7 @@
         "transient": false,
         "exported": false,
         "token": "MongooseModule",
-        "initTime": 26.326917999999978
+        "initTime": 23.335242000000108
       }
     },
     "984659045": {
@@ -331,24 +324,7 @@
         "transient": false,
         "exported": false,
         "token": "MongooseModule",
-        "initTime": 26.238016000000016
-      }
-    },
-    "1051058129": {
-      "id": "1051058129",
-      "label": "AuthGuard",
-      "parent": "-1134487807",
-      "metadata": {
-        "type": "injectable",
-        "internal": false,
-        "sourceModuleName": "AuthModule",
-        "durable": false,
-        "static": true,
-        "transient": false,
-        "exported": false,
-        "token": "AuthGuard",
-        "subtype": "guard",
-        "initTime": 0.39521400000000995
+        "initTime": 23.241237000000183
       }
     },
     "1063746662": {
@@ -364,46 +340,7 @@
         "transient": false,
         "exported": true,
         "token": "CONFIGURATION_TOKEN",
-        "initTime": 26.460823000000005
-      }
-    },
-    "1070370213": {
-      "id": "1070370213",
-      "label": "JwtService",
-      "parent": "-536515674",
-      "metadata": {
-        "type": "provider",
-        "internal": false,
-        "sourceModuleName": "JwtModule",
-        "durable": false,
-        "static": true,
-        "transient": false,
-        "exported": true,
-        "token": "JwtService",
-        "initTime": 22.42308199999991
-      }
-    },
-    "1404752088": {
-      "id": "1404752088",
-      "label": "AuthController",
-      "parent": "-1134487807",
-      "metadata": {
-        "type": "controller",
-        "internal": false,
-        "sourceModuleName": "AuthModule",
-        "durable": false,
-        "static": true,
-        "transient": false,
-        "exported": false,
-        "token": "AuthController",
-        "initTime": 0.0797019999999975,
-        "enhancers": [
-          {
-            "id": "1051058129",
-            "methodKey": "getProfile",
-            "subtype": "guard"
-          }
-        ]
+        "initTime": 23.49585000000002
       }
     },
     "1434456218": {
@@ -420,7 +357,7 @@
         "transient": false,
         "exported": true,
         "token": "Reflector",
-        "initTime": 29.88804300000004
+        "initTime": 25.910268000000087
       }
     },
     "1443316584": {
@@ -436,7 +373,7 @@
         "transient": false,
         "exported": true,
         "token": "HeroModel",
-        "initTime": 48.69219900000007
+        "initTime": 68.87196999999992
       }
     },
     "1499494248": {
@@ -452,23 +389,24 @@
         "transient": false,
         "exported": false,
         "token": "KnightsCalculationProvider",
-        "initTime": 26.247214999999983
+        "initTime": 23.25273799999991
       }
     },
-    "1542581243": {
-      "id": "1542581243",
-      "label": "ModuleRef",
-      "parent": "-1134487807",
+    "1544985728": {
+      "id": "1544985728",
+      "label": "ClientsModule",
+      "parent": "891985575",
       "metadata": {
         "type": "provider",
         "internal": true,
-        "sourceModuleName": "AuthModule",
+        "sourceModuleName": "ClientsModule",
         "durable": false,
         "static": true,
         "scope": 0,
         "transient": false,
         "exported": false,
-        "token": "ModuleRef"
+        "token": "ClientsModule",
+        "initTime": 23.480148999999983
       }
     },
     "1690574933": {
@@ -495,22 +433,6 @@
         "global": true,
         "dynamic": true,
         "internal": false
-      }
-    },
-    "1712941473": {
-      "id": "1712941473",
-      "label": "ApplicationConfig",
-      "parent": "-536515674",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "JwtModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "ApplicationConfig"
       }
     },
     "1732046368": {
@@ -559,7 +481,7 @@
         "transient": false,
         "exported": false,
         "token": "ConfigModule",
-        "initTime": 26.616228999999976
+        "initTime": 23.901470000000018
       }
     },
     "1787828844": {
@@ -576,7 +498,7 @@
         "transient": false,
         "exported": false,
         "token": "ConfigHostModule",
-        "initTime": 26.486624000000006
+        "initTime": 23.51625100000001
       }
     },
     "1861393510": {
@@ -608,7 +530,7 @@
         "transient": false,
         "exported": false,
         "token": "KnightsService",
-        "initTime": 56.86778400000003
+        "initTime": 70.92437100000006
       }
     },
     "1919157847": {
@@ -625,7 +547,23 @@
         "transient": false,
         "exported": true,
         "token": "REQUEST",
-        "initTime": 27.115245999999956
+        "initTime": 23.885868000000073
+      }
+    },
+    "1959339810": {
+      "id": "1959339810",
+      "label": "ApplicationConfig",
+      "parent": "891985575",
+      "metadata": {
+        "type": "provider",
+        "internal": true,
+        "sourceModuleName": "ClientsModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": false,
+        "token": "ApplicationConfig"
       }
     },
     "1986699406": {
@@ -706,7 +644,7 @@
         "transient": true,
         "exported": true,
         "token": "INQUIRER",
-        "initTime": 27.09234600000002
+        "initTime": 23.878868999999895
       }
     },
     "-26938366": {
@@ -722,7 +660,7 @@
         "transient": false,
         "exported": true,
         "token": "ModulesContainer",
-        "initTime": 27.455157999999983
+        "initTime": 24.187382999999954
       }
     },
     "-326832201": {
@@ -738,7 +676,7 @@
         "transient": false,
         "exported": true,
         "token": "HttpAdapterHost",
-        "initTime": 27.429157000000032
+        "initTime": 24.168783000000076
       }
     },
     "-702581189": {
@@ -754,7 +692,7 @@
         "transient": false,
         "exported": true,
         "token": "LazyModuleLoader",
-        "initTime": 27.416156
+        "initTime": 24.16388300000017
       }
     },
     "-1904419534": {
@@ -770,7 +708,7 @@
         "transient": false,
         "exported": true,
         "token": "SerializedGraph",
-        "initTime": 27.399955999999975
+        "initTime": 24.15978199999995
       }
     },
     "-19112576": {
@@ -797,7 +735,7 @@
         "transient": false,
         "exported": false,
         "token": "AppModule",
-        "initTime": 27.371054999999956
+        "initTime": 24.148881999999958
       }
     },
     "-71302842": {
@@ -845,25 +783,7 @@
         "transient": false,
         "exported": false,
         "token": "AppService",
-        "initTime": 27.33575399999995
-      }
-    },
-    "-1888273744": {
-      "id": "-1888273744",
-      "label": "AuthGuard",
-      "parent": "-19112576",
-      "metadata": {
-        "type": "provider",
-        "internal": false,
-        "sourceModuleName": "AppModule",
-        "durable": false,
-        "static": true,
-        "transient": false,
-        "exported": false,
-        "token": "APP_GUARD (UUID: 1239237319)",
-        "subtype": "guard",
-        "initTime": 29.177118000000064,
-        "global": true
+        "initTime": 24.13008100000002
       }
     },
     "-572011637": {
@@ -906,7 +826,7 @@
         "transient": false,
         "exported": false,
         "token": "MongooseCoreModule",
-        "initTime": 27.162747999999965
+        "initTime": 24.3026890000001
       }
     },
     "-503631789": {
@@ -922,7 +842,23 @@
         "transient": false,
         "exported": true,
         "token": "ConfigService",
-        "initTime": 28.371489999999994
+        "initTime": 25.420543999999836
+      }
+    },
+    "-1711617994": {
+      "id": "-1711617994",
+      "label": "AUTH_SERVICE",
+      "parent": "891985575",
+      "metadata": {
+        "type": "provider",
+        "internal": false,
+        "sourceModuleName": "ClientsModule",
+        "durable": false,
+        "static": true,
+        "scope": 0,
+        "transient": false,
+        "exported": true,
+        "token": "AUTH_SERVICE"
       }
     },
     "-755603136": {
@@ -939,7 +875,7 @@
         "transient": false,
         "exported": false,
         "token": "KnightsModule",
-        "initTime": 26.43952300000001
+        "initTime": 23.4569469999999
       }
     },
     "-18958741": {
@@ -971,7 +907,7 @@
         "transient": false,
         "exported": false,
         "token": "KnightsCalculationProvider",
-        "initTime": 26.340519000000086
+        "initTime": 23.35034299999984
       }
     },
     "-254366448": {
@@ -987,7 +923,7 @@
         "transient": false,
         "exported": false,
         "token": "KnightsController",
-        "initTime": 0.07420200000001387
+        "initTime": 0.11800500000003922
       }
     },
     "-1854488872": {
@@ -1029,7 +965,7 @@
         "transient": false,
         "exported": true,
         "token": "KnightModel",
-        "initTime": 48.81770300000005
+        "initTime": 69.00007699999992
       }
     },
     "-1636720575": {
@@ -1071,7 +1007,7 @@
         "transient": false,
         "exported": true,
         "token": "HeroesService",
-        "initTime": 56.47566999999992
+        "initTime": 70.23303699999997
       }
     },
     "-1854488871": {
@@ -1099,166 +1035,6 @@
         "exported": false,
         "token": "ModuleRef"
       }
-    },
-    "-1134487807": {
-      "id": "-1134487807",
-      "label": "AuthModule",
-      "metadata": {
-        "type": "module",
-        "global": false,
-        "dynamic": false,
-        "internal": false
-      }
-    },
-    "-1846279256": {
-      "id": "-1846279256",
-      "label": "AuthModule",
-      "parent": "-1134487807",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "AuthModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "AuthModule",
-        "initTime": 21.349045000000046
-      }
-    },
-    "-120792986": {
-      "id": "-120792986",
-      "label": "ApplicationConfig",
-      "parent": "-1134487807",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "AuthModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "ApplicationConfig"
-      }
-    },
-    "-793915935": {
-      "id": "-793915935",
-      "label": "AuthService",
-      "parent": "-1134487807",
-      "metadata": {
-        "type": "provider",
-        "internal": false,
-        "sourceModuleName": "AuthModule",
-        "durable": false,
-        "static": true,
-        "transient": false,
-        "exported": false,
-        "token": "AuthService",
-        "initTime": 23.071604999999977
-      }
-    },
-    "-2003726489": {
-      "id": "-2003726489",
-      "label": "UsersModule",
-      "metadata": {
-        "type": "module",
-        "global": false,
-        "dynamic": false,
-        "internal": false
-      }
-    },
-    "-495603840": {
-      "id": "-495603840",
-      "label": "UsersModule",
-      "parent": "-2003726489",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "UsersModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "UsersModule",
-        "initTime": 21.026534000000083
-      }
-    },
-    "-618964563": {
-      "id": "-618964563",
-      "label": "ModuleRef",
-      "parent": "-2003726489",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "UsersModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "ModuleRef"
-      }
-    },
-    "-643958110": {
-      "id": "-643958110",
-      "label": "ApplicationConfig",
-      "parent": "-2003726489",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "UsersModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "ApplicationConfig"
-      }
-    },
-    "-536515674": {
-      "id": "-536515674",
-      "label": "JwtModule",
-      "metadata": {
-        "type": "module",
-        "global": false,
-        "dynamic": true,
-        "internal": false
-      }
-    },
-    "-588705940": {
-      "id": "-588705940",
-      "label": "ModuleRef",
-      "parent": "-536515674",
-      "metadata": {
-        "type": "provider",
-        "internal": true,
-        "sourceModuleName": "JwtModule",
-        "durable": false,
-        "static": true,
-        "scope": 0,
-        "transient": false,
-        "exported": false,
-        "token": "ModuleRef"
-      }
-    },
-    "-1900804336": {
-      "id": "-1900804336",
-      "label": "JWT_MODULE_OPTIONS",
-      "parent": "-536515674",
-      "metadata": {
-        "type": "provider",
-        "internal": false,
-        "sourceModuleName": "JwtModule",
-        "durable": false,
-        "static": true,
-        "transient": false,
-        "exported": false,
-        "token": "JWT_MODULE_OPTIONS",
-        "initTime": 20.980331999999976
-      }
     }
   },
   "edges": {
@@ -1277,22 +1053,6 @@
         "injectionType": "constructor"
       },
       "id": "68000029"
-    },
-    "90202244": {
-      "source": "-1888273744",
-      "target": "1070370213",
-      "metadata": {
-        "type": "class-to-class",
-        "sourceModuleName": "AppModule",
-        "sourceClassName": "AuthGuard",
-        "targetClassName": "JwtService",
-        "sourceClassToken": "APP_GUARD (UUID: 1239237319)",
-        "targetClassToken": "JwtService",
-        "targetModuleName": "JwtModule",
-        "keyOrIndex": 0,
-        "injectionType": "constructor"
-      },
-      "id": "90202244"
     },
     "189694679": {
       "source": "1434456218",
@@ -1337,26 +1097,6 @@
       },
       "id": "212635469"
     },
-    "219775656": {
-      "source": "-19112576",
-      "target": "-1134487807",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "AppModule",
-        "targetModuleName": "AuthModule"
-      },
-      "id": "219775656"
-    },
-    "289403048": {
-      "source": "-1134487807",
-      "target": "-2003726489",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "AuthModule",
-        "targetModuleName": "UsersModule"
-      },
-      "id": "289403048"
-    },
     "330046600": {
       "source": "699745446",
       "target": "-1350909915",
@@ -1366,6 +1106,16 @@
         "targetModuleName": "MongooseCoreModule"
       },
       "id": "330046600"
+    },
+    "347164766": {
+      "source": "891985575",
+      "target": "1712628187",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ClientsModule",
+        "targetModuleName": "ConfigModule"
+      },
+      "id": "347164766"
     },
     "353572985": {
       "source": "1712628187",
@@ -1447,16 +1197,6 @@
       },
       "id": "760002090"
     },
-    "784525888": {
-      "source": "-536515674",
-      "target": "211572259",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "JwtModule",
-        "targetModuleName": "ConfigHostModule"
-      },
-      "id": "784525888"
-    },
     "805244905": {
       "source": "-1350909915",
       "target": "211572259",
@@ -1477,35 +1217,15 @@
       },
       "id": "897941956"
     },
-    "920687522": {
-      "source": "-1134487807",
-      "target": "211572259",
+    "910530322": {
+      "source": "891985575",
+      "target": "-1350909915",
       "metadata": {
         "type": "module-to-module",
-        "sourceModuleName": "AuthModule",
-        "targetModuleName": "ConfigHostModule"
+        "sourceModuleName": "ClientsModule",
+        "targetModuleName": "MongooseCoreModule"
       },
-      "id": "920687522"
-    },
-    "978356204": {
-      "source": "-1134487807",
-      "target": "-536515674",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "AuthModule",
-        "targetModuleName": "JwtModule"
-      },
-      "id": "978356204"
-    },
-    "987755577": {
-      "source": "-2003726489",
-      "target": "555176277",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "UsersModule",
-        "targetModuleName": "InternalCoreModule"
-      },
-      "id": "987755577"
+      "id": "910530322"
     },
     "991734490": {
       "source": "-19112576",
@@ -1516,6 +1236,16 @@
         "targetModuleName": "KnightsModule"
       },
       "id": "991734490"
+    },
+    "993542241": {
+      "source": "-19112576",
+      "target": "891985575",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "AppModule",
+        "targetModuleName": "ClientsModule"
+      },
+      "id": "993542241"
     },
     "1036396253": {
       "source": "664692133",
@@ -1547,16 +1277,6 @@
       },
       "id": "1124084776"
     },
-    "1134336077": {
-      "source": "-536515674",
-      "target": "555176277",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "JwtModule",
-        "targetModuleName": "InternalCoreModule"
-      },
-      "id": "1134336077"
-    },
     "1145350370": {
       "source": "699745446",
       "target": "1712628187",
@@ -1576,48 +1296,6 @@
         "targetModuleName": "MongooseCoreModule"
       },
       "id": "1154448364"
-    },
-    "1175183130": {
-      "source": "1070370213",
-      "target": "-1900804336",
-      "metadata": {
-        "type": "class-to-class",
-        "sourceModuleName": "JwtModule",
-        "sourceClassName": "JwtService",
-        "targetClassName": "JWT_MODULE_OPTIONS",
-        "sourceClassToken": "JwtService",
-        "targetClassToken": "JWT_MODULE_OPTIONS",
-        "targetModuleName": "JwtModule",
-        "keyOrIndex": 0,
-        "injectionType": "constructor"
-      },
-      "id": "1175183130"
-    },
-    "1176615609": {
-      "source": "-2003726489",
-      "target": "1712628187",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "UsersModule",
-        "targetModuleName": "ConfigModule"
-      },
-      "id": "1176615609"
-    },
-    "1179605463": {
-      "source": "1051058129",
-      "target": "1070370213",
-      "metadata": {
-        "type": "class-to-class",
-        "sourceModuleName": "AuthModule",
-        "sourceClassName": "AuthGuard",
-        "targetClassName": "JwtService",
-        "sourceClassToken": "AuthGuard",
-        "targetClassToken": "JwtService",
-        "targetModuleName": "JwtModule",
-        "keyOrIndex": 0,
-        "injectionType": "constructor"
-      },
-      "id": "1179605463"
     },
     "1207819375": {
       "source": "-19112576",
@@ -1645,48 +1323,6 @@
       },
       "id": "1346890576"
     },
-    "1414936007": {
-      "source": "-536515674",
-      "target": "1712628187",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "JwtModule",
-        "targetModuleName": "ConfigModule"
-      },
-      "id": "1414936007"
-    },
-    "1450323722": {
-      "source": "-793915935",
-      "target": "1070370213",
-      "metadata": {
-        "type": "class-to-class",
-        "sourceModuleName": "AuthModule",
-        "sourceClassName": "AuthService",
-        "targetClassName": "JwtService",
-        "sourceClassToken": "AuthService",
-        "targetClassToken": "JwtService",
-        "targetModuleName": "JwtModule",
-        "keyOrIndex": 1,
-        "injectionType": "constructor"
-      },
-      "id": "1450323722"
-    },
-    "1460712854": {
-      "source": "-793915935",
-      "target": "603011239",
-      "metadata": {
-        "type": "class-to-class",
-        "sourceModuleName": "AuthModule",
-        "sourceClassName": "AuthService",
-        "targetClassName": "UsersService",
-        "sourceClassToken": "AuthService",
-        "targetClassToken": "UsersService",
-        "targetModuleName": "UsersModule",
-        "keyOrIndex": 0,
-        "injectionType": "constructor"
-      },
-      "id": "1460712854"
-    },
     "1475920902": {
       "source": "-503631789",
       "target": "930519593",
@@ -1712,32 +1348,6 @@
         "targetModuleName": "MongooseCoreModule"
       },
       "id": "1497086506"
-    },
-    "1572458969": {
-      "source": "1404752088",
-      "target": "-793915935",
-      "metadata": {
-        "type": "class-to-class",
-        "sourceModuleName": "AuthModule",
-        "sourceClassName": "AuthController",
-        "targetClassName": "AuthService",
-        "sourceClassToken": "AuthController",
-        "targetClassToken": "AuthService",
-        "targetModuleName": "AuthModule",
-        "keyOrIndex": 0,
-        "injectionType": "constructor"
-      },
-      "id": "1572458969"
-    },
-    "1690588001": {
-      "source": "-1134487807",
-      "target": "1712628187",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "AuthModule",
-        "targetModuleName": "ConfigModule"
-      },
-      "id": "1690588001"
     },
     "1791876867": {
       "source": "-1854488871",
@@ -1778,16 +1388,6 @@
         "targetModuleName": "ConfigModule"
       },
       "id": "1923272676"
-    },
-    "1940456107": {
-      "source": "-536515674",
-      "target": "-1350909915",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "JwtModule",
-        "targetModuleName": "MongooseCoreModule"
-      },
-      "id": "1940456107"
     },
     "2075556747": {
       "source": "664692133",
@@ -1847,40 +1447,6 @@
         "injectionType": "constructor"
       },
       "id": "-951393523"
-    },
-    "-1994625580": {
-      "source": "-1888273744",
-      "target": "671882984",
-      "metadata": {
-        "type": "class-to-class",
-        "sourceModuleName": "AppModule",
-        "sourceClassName": "AuthGuard",
-        "targetClassName": "Reflector",
-        "sourceClassToken": "APP_GUARD (UUID: 1239237319)",
-        "targetClassToken": "Reflector",
-        "targetModuleName": "InternalCoreModule",
-        "keyOrIndex": 1,
-        "injectionType": "constructor",
-        "internal": true
-      },
-      "id": "-1994625580"
-    },
-    "-2021896663": {
-      "source": "1051058129",
-      "target": "671882984",
-      "metadata": {
-        "type": "class-to-class",
-        "sourceModuleName": "AuthModule",
-        "sourceClassName": "AuthGuard",
-        "targetClassName": "Reflector",
-        "sourceClassToken": "AuthGuard",
-        "targetClassToken": "Reflector",
-        "targetModuleName": "InternalCoreModule",
-        "keyOrIndex": 1,
-        "injectionType": "constructor",
-        "internal": true
-      },
-      "id": "-2021896663"
     },
     "-946875659": {
       "source": "-25623051",
@@ -1998,16 +1564,6 @@
       },
       "id": "-844262897"
     },
-    "-158970266": {
-      "source": "-19112576",
-      "target": "-2003726489",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "AppModule",
-        "targetModuleName": "UsersModule"
-      },
-      "id": "-158970266"
-    },
     "-815553404": {
       "source": "-19112576",
       "target": "211572259",
@@ -2058,15 +1614,25 @@
       },
       "id": "-60954175"
     },
-    "-1713329340": {
-      "source": "664692133",
-      "target": "-1134487807",
+    "-384010828": {
+      "source": "891985575",
+      "target": "555176277",
       "metadata": {
         "type": "module-to-module",
-        "sourceModuleName": "KnightsModule",
-        "targetModuleName": "AuthModule"
+        "sourceModuleName": "ClientsModule",
+        "targetModuleName": "InternalCoreModule"
       },
-      "id": "-1713329340"
+      "id": "-384010828"
+    },
+    "-134066969": {
+      "source": "891985575",
+      "target": "211572259",
+      "metadata": {
+        "type": "module-to-module",
+        "sourceModuleName": "ClientsModule",
+        "targetModuleName": "ConfigHostModule"
+      },
+      "id": "-134066969"
     },
     "-1744547383": {
       "source": "664692133",
@@ -2127,222 +1693,87 @@
         "targetModuleName": "ConfigHostModule"
       },
       "id": "-138081260"
-    },
-    "-1377619055": {
-      "source": "-1134487807",
-      "target": "555176277",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "AuthModule",
-        "targetModuleName": "InternalCoreModule"
-      },
-      "id": "-1377619055"
-    },
-    "-1941719021": {
-      "source": "-1134487807",
-      "target": "-1350909915",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "AuthModule",
-        "targetModuleName": "MongooseCoreModule"
-      },
-      "id": "-1941719021"
-    },
-    "-1896236073": {
-      "source": "-2003726489",
-      "target": "-1350909915",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "UsersModule",
-        "targetModuleName": "MongooseCoreModule"
-      },
-      "id": "-1896236073"
-    },
-    "-991562516": {
-      "source": "-2003726489",
-      "target": "211572259",
-      "metadata": {
-        "type": "module-to-module",
-        "sourceModuleName": "UsersModule",
-        "targetModuleName": "ConfigHostModule"
-      },
-      "id": "-991562516"
-    },
-    "-796430476": {
-      "source": "1404752088",
-      "target": "1051058129",
-      "metadata": {
-        "type": "class-to-class",
-        "sourceModuleName": "AuthModule",
-        "sourceClassName": "AuthController",
-        "targetClassName": "AuthGuard",
-        "sourceClassToken": "AuthController",
-        "targetClassToken": "AuthGuard",
-        "targetModuleName": "AuthModule",
-        "injectionType": "decorator"
-      },
-      "id": "-796430476"
     }
   },
   "entrypoints": {
-    "233936880": [
-      {
-        "type": "http-endpoint",
-        "methodName": "getHello",
-        "className": "AppController",
-        "classNodeId": "233936880",
-        "metadata": {
-          "key": "/",
-          "path": "/",
-          "requestMethod": "GET"
-        },
-        "id": "233936880_getHello"
-      }
-    ],
-    "1404752088": [
-      {
-        "type": "http-endpoint",
-        "methodName": "signIn",
-        "className": "AuthController",
-        "classNodeId": "1404752088",
-        "metadata": {
-          "key": "/auth/login",
-          "path": "/auth/login",
-          "requestMethod": "POST"
-        },
-        "id": "1404752088_signIn"
-      },
-      {
-        "type": "http-endpoint",
-        "methodName": "getProfile",
-        "className": "AuthController",
-        "classNodeId": "1404752088",
-        "metadata": {
-          "key": "/auth/profile",
-          "path": "/auth/profile",
-          "requestMethod": "GET"
-        },
-        "id": "1404752088_getProfile"
-      },
-      {
-        "type": "http-endpoint",
-        "methodName": "create",
-        "className": "AuthController",
-        "classNodeId": "1404752088",
-        "metadata": {
-          "key": "/auth",
-          "path": "/auth",
-          "requestMethod": "POST"
-        },
-        "id": "1404752088_create"
-      },
-      {
-        "type": "http-endpoint",
-        "methodName": "findAll",
-        "className": "AuthController",
-        "classNodeId": "1404752088",
-        "metadata": {
-          "key": "/auth",
-          "path": "/auth",
-          "requestMethod": "GET"
-        },
-        "id": "1404752088_findAll"
-      },
-      {
-        "type": "http-endpoint",
-        "methodName": "findOne",
-        "className": "AuthController",
-        "classNodeId": "1404752088",
-        "metadata": {
-          "key": "/auth/:id",
-          "path": "/auth/:id",
-          "requestMethod": "GET"
-        },
-        "id": "1404752088_findOne"
-      },
-      {
-        "type": "http-endpoint",
-        "methodName": "update",
-        "className": "AuthController",
-        "classNodeId": "1404752088",
-        "metadata": {
-          "key": "/auth/:id",
-          "path": "/auth/:id",
-          "requestMethod": "PATCH"
-        },
-        "id": "1404752088_update"
-      },
-      {
-        "type": "http-endpoint",
-        "methodName": "remove",
-        "className": "AuthController",
-        "classNodeId": "1404752088",
-        "metadata": {
-          "key": "/auth/:id",
-          "path": "/auth/:id",
-          "requestMethod": "DELETE"
-        },
-        "id": "1404752088_remove"
-      }
-    ],
     "-254366448": [
       {
-        "type": "http-endpoint",
+        "type": "microservice",
         "methodName": "create",
         "className": "KnightsController",
         "classNodeId": "-254366448",
         "metadata": {
-          "key": "/knights",
-          "path": "/knights",
-          "requestMethod": "POST"
+          "key": "create_knight",
+          "transportId": "TCP",
+          "patterns": [
+            "create_knight"
+          ],
+          "isEventHandler": false,
+          "extras": {}
         },
         "id": "-254366448_create"
       },
       {
-        "type": "http-endpoint",
+        "type": "microservice",
         "methodName": "findAll",
         "className": "KnightsController",
         "classNodeId": "-254366448",
         "metadata": {
-          "key": "/knights",
-          "path": "/knights",
-          "requestMethod": "GET"
+          "key": "get_knights",
+          "transportId": "TCP",
+          "patterns": [
+            "get_knights"
+          ],
+          "isEventHandler": false,
+          "extras": {}
         },
         "id": "-254366448_findAll"
       },
       {
-        "type": "http-endpoint",
+        "type": "microservice",
         "methodName": "findOne",
         "className": "KnightsController",
         "classNodeId": "-254366448",
         "metadata": {
-          "key": "/knights/:id",
-          "path": "/knights/:id",
-          "requestMethod": "GET"
+          "key": "get_knight_by_id",
+          "transportId": "TCP",
+          "patterns": [
+            "get_knight_by_id"
+          ],
+          "isEventHandler": false,
+          "extras": {}
         },
         "id": "-254366448_findOne"
       },
       {
-        "type": "http-endpoint",
+        "type": "microservice",
         "methodName": "update",
         "className": "KnightsController",
         "classNodeId": "-254366448",
         "metadata": {
-          "key": "/knights/:id",
-          "path": "/knights/:id",
-          "requestMethod": "PATCH"
+          "key": "update_knight_by_id",
+          "transportId": "TCP",
+          "patterns": [
+            "update_knight_by_id"
+          ],
+          "isEventHandler": false,
+          "extras": {}
         },
         "id": "-254366448_update"
       },
       {
-        "type": "http-endpoint",
+        "type": "microservice",
         "methodName": "remove",
         "className": "KnightsController",
         "classNodeId": "-254366448",
         "metadata": {
-          "key": "/knights/:id",
-          "path": "/knights/:id",
-          "requestMethod": "DELETE"
+          "key": "remove_knight",
+          "transportId": "TCP",
+          "patterns": [
+            "remove_knight"
+          ],
+          "isEventHandler": false,
+          "extras": {}
         },
         "id": "-254366448_remove"
       }
@@ -2355,11 +1786,7 @@
         "ref": "ValidationPipe"
       }
     ],
-    "attachedEnhancers": [
-      {
-        "nodeId": "-1888273744"
-      }
-    ]
+    "attachedEnhancers": []
   },
   "status": "complete"
 }

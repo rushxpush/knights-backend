@@ -25,13 +25,22 @@
 - &check; Testes unitários - KnightsService
 - &check; Testes unitários - HeroesService
 - &check; Testes unitários - KnightsCalculationProvider
+- &#x2610; Criar AuthService
+- &#x2610; Decidir em uma estratégia para reduzir latencia de chamados ao AuthService (otimizar com caching talvez)
+- &#x2610; Containerizar AuthService
 - &#x2610; Documentar rotas com swagger
 - &#x2610; Refatorar os stubs. Estão um pouco confusos e tem duplicatas 
 - &#x2610; Testes e2e
 - &#x2610; Aplicar os tipos do Typescript em todas as funções e variáveis que faltam
+- &#x2610; Instalar Terminus
+- &#x2610; Grafana, Jaeger, Prometheus, OpenTelemetry 
 
 
 [Ir para o topo](#knights-challenge---backend)
+
+## Microserviços
+
+- AuthService
 
 ## Descrição  
 
@@ -56,6 +65,13 @@ cd knights-backend
 docker compose up --build
 ```
 
+2. 1. Rodar Microserviços:
+```bash
+docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:4.0-management
+nest start --watch --entryFile auth-service/main
+nest start --watch --entryFile users-service/main
+```
+
 3. Não esqueça de montar a imagem do backend e rodar. Link: [knights-challenge-frontend](https://github.com/rushxpush/knights-frontend)
 
 4. Acesse a página em [localhost:3000](http://localhost:3000)
@@ -64,6 +80,8 @@ docker compose up --build
 ```bash
 docker compose --profile test up
 ```
+
+
 
 [Ir para o topo](#knights-challenge---backend)
 

@@ -11,18 +11,21 @@ import {
 import { KnightsService } from './knights.service';
 import { CreateKnightDto } from './dto/create-knight.dto';
 import { UpdateKnightDto } from './dto/update-knight.dto';
+import { MessagePattern, Payload } from '@nestjs/microservices';
 
 @Controller('knights')
 export class KnightsController {
   constructor(private readonly knightsService: KnightsService) {}
 
-  @Post()
-  create(@Body() createKnightDto: CreateKnightDto) {
+  @MessagePattern('create_knight')
+  create(@Payload('createKnightDto') createKnightDto: CreateKnightDto) {
     return this.knightsService.create(createKnightDto);
   }
 
-  @Get()
-  findAll(@Query('filter') filter?: string) {
+  @MessagePattern('get_knights')
+  findAll(@Payload('filter') filter?: string) {
+    console.log('filter: ', filter === 'heroes');
+    console.log('get knights');
     if (filter === 'heroes') {
       return this.knightsService.findAllHeroes();
     }
@@ -30,18 +33,25 @@ export class KnightsController {
     return this.knightsService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') _id: string) {
+  @MessagePattern('get_knight_by_id')
+  findOne(@Payload('_id') _id: string) {
     return this.knightsService.findOne(_id);
   }
 
-  @Patch(':id')
-  update(@Param('id') _id: string, @Body() updateKnightDto: UpdateKnightDto) {
-    return this.knightsService.update(_id, updateKnightDto);
+  @MessagePattern('update_knight_by_id')
+  update(
+    @Payload('payload')
+    payload: {
+      _id: string;
+      updateKnightDto: UpdateKnightDto;
+    },
+  ) {
+    console.log('payload: ', payload);
+    return this.knightsService.update(payload._id, payload.updateKnightDto);
   }
 
-  @Delete(':id')
-  remove(@Param('id') _id: string) {
+  @MessagePattern('remove_knight')
+  remove(@Payload('_id') _id: string) {
     return this.knightsService.remove(_id);
   }
 }
