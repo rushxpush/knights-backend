@@ -3,11 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { KnightsModule } from './knights/knights.module';
 import { MongooseModule } from '@nestjs/mongoose';
-// import { OldAuthModule } from './auth/oldauth.module';
-// import { UsersModule } from './users-service/users.module';
 import { ConfigModule } from '@nestjs/config';
-// import { APP_GUARD } from '@nestjs/core';
-// import { AuthGuard } from './auth/auth.guard';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 
 @Module({
@@ -28,16 +24,8 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
       },
     ]),
     KnightsModule,
-    // OldAuthModule,
-    // UsersModule,
   ],
   controllers: [AppController],
-  providers: [
-    AppService,
-    // {
-    //   provide: APP_GUARD,
-    //   useClass: AuthGuard,
-    // },
-  ],
+  providers: [AppService],
 })
 export class AppModule {}
