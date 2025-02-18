@@ -4,7 +4,7 @@ import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
-  const app = await NestFactory.create(UsersModule);
+  const app = await NestFactory.create(UsersModule, { snapshot: true });
 
   app.connectMicroservice<MicroserviceOptions>({
     transport: Transport.RMQ,

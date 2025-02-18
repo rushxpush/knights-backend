@@ -19,12 +19,24 @@ console.log('process.env.JWT_SECRET: ', process.env.JWT_SECRET);
           queueOptions: { durable: false },
         },
       },
+      {
+        name: 'KAFKA_CLIENT_SERVICE',
+        transport: Transport.KAFKA,
+        options: {
+          client: {
+            clientId: 'auth-service',
+            brokers: ['localhost:9092'],
+          },
+          consumer: {
+            groupId: 'auth-group',
+          },
+        },
+      },
     ]),
     JwtModule.registerAsync({
       useFactory: () => ({
-        // global: true,
         secret: process.env.JWT_SECRET || 'default_secret',
-        signOptions: { expiresIn: '600s' },
+        signOptions: { expiresIn: '10s' },
       }),
     }),
   ],

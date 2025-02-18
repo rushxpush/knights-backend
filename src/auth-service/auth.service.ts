@@ -5,7 +5,7 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { ClientProxy } from '@nestjs/microservices';
+import { ClientKafka, ClientProxy, RpcException } from '@nestjs/microservices';
 import { firstValueFrom } from 'rxjs';
 import { SignInDto } from 'src/users-service/dto/sign-auth.dto';
 
@@ -14,6 +14,8 @@ export class AuthService {
   constructor(
     private jwtService: JwtService,
     @Inject('CLIENT_SERVICE') private readonly clientService: ClientProxy,
+    @Inject('KAFKA_CLIENT_SERVICE')
+    private readonly kafkaClientService: ClientKafka,
   ) {}
 
   async validateToken(token: string) {
@@ -25,28 +27,72 @@ export class AuthService {
     }
   }
 
-  async signIn(signInDto: SignInDto): Promise<{ access_token: string }> {
+  async signIn(signInPayload): Promise<{ access_token: string }> {
     console.log('2 - auth-service - service signIn');
+    // console.log('singInPayload: ', signInPayload);
+    const signInDto: SignInDto = signInPayload.signInDto;
+    const headers = signInPayload.headers;
+    const ipAddress = signInPayload.ipAdress;
 
-    console.log('signInDto: ', signInDto);
     try {
       const user = await firstValueFrom(
         this.clientService.send('find-user', { signInDto }),
       );
-      console.log('user: ', user);
+
+      if (!user.username) {
+        this.kafkaClientService.emit('auth.login.events', {
+          serviceName: 'auth_service',
+          logType: 'user_login',
+          eventTimestamp: new Date(),
+          username: signInDto.username,
+          status: 'incorrect_username',
+          ipAddress: ipAddress,
+          userAgent: headers['user-agent'],
+        });
+        throw new RpcException({
+          statusCode: 401,
+          message: 'Erro! Usuário não autorizado.',
+        });
+      }
 
       if (user?.password !== signInDto.password) {
-        throw new UnauthorizedException(
-          'Erro! Usuário ou senha não autorizados.',
-        );
+        this.kafkaClientService.emit('auth.login.events', {
+          serviceName: 'auth_service',
+          logType: 'user_login',
+          eventTimestamp: new Date(),
+          username: signInDto.username,
+          status: 'incorrect_password',
+          ipAddress: ipAddress,
+          userAgent: headers['user-agent'],
+        });
+        throw new RpcException({
+          statusCode: 401,
+          message: 'Erro! Senha não autorizada.',
+        });
       }
       const payload = { sub: user.userId, username: user.username };
+
+      this.kafkaClientService.emit('auth.login.events', {
+        serviceName: 'auth_service',
+        logType: 'user_login',
+        eventTimestamp: new Date(),
+        username: signInDto.username,
+        status: 'successful_login',
+        ipAddress: ipAddress,
+        userAgent: headers['user-agent'],
+      });
       return {
         access_token: await this.jwtService.signAsync(payload),
       };
     } catch (error) {
-      console.log('error: ', error);
-      throw new InternalServerErrorException('Something went wrong');
+      if (error instanceof RpcException) {
+        throw error;
+      }
+
+      throw new RpcException({
+        status: 500,
+        message: 'Um erro inesperado ocorreu',
+      });
     }
   }
 }

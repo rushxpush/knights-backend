@@ -20,6 +20,9 @@ export class UsersService {
   async findOne(username: string): Promise<User | undefined> {
     console.log('4 - users-service - service findOne');
     console.log('username: ', username);
-    return this.users.find((user) => user.username === username);
+    const user = this.users.find((user) => user.username === username);
+    return user
+      ? user
+      : { userId: undefined, username: undefined, password: undefined };
   }
 }

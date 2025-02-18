@@ -3,12 +3,14 @@ import { AuthService } from './auth.service';
 import { MessagePattern, Payload } from '@nestjs/microservices';
 import { delay, of } from 'rxjs';
 import { SignInDto } from 'src/users-service/dto/sign-auth.dto';
+import { Request } from 'express';
+import { IncomingMessage } from 'http';
 
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
-  @MessagePattern({ cmd: 'ping' })
+  @MessagePattern('ping')
   ping() {
     console.log('AuthService received ping');
     return of('pong').pipe(delay(2000));
@@ -20,8 +22,15 @@ export class AuthController {
   }
 
   @MessagePattern('get_token')
-  signIn(@Payload() signInDto: SignInDto) {
+  signIn(
+    @Payload()
+    payload: {
+      signInDto: SignInDto;
+      headers: any;
+      ipAddress: string;
+    },
+  ) {
     console.log('1 - auth-service - controller signIn');
-    return this.authService.signIn(signInDto);
+    return this.authService.signIn(payload);
   }
 }

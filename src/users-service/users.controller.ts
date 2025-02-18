@@ -18,4 +18,10 @@ export class UsersController {
     const user = this.usersService.findOne(signInDto.username);
     return user;
   }
+
+  @MessagePattern('kafka-test')
+  testKafka(@Payload() testData: any) {
+    console.log('****************************************************');
+    console.log('testData: ', testData);
+  }
 }

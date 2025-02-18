@@ -14,7 +14,23 @@ async function bootstrap() {
     },
   });
 
+  const kafkaClient = await NestFactory.createMicroservice<MicroserviceOptions>(
+    AuthModule,
+    {
+      transport: Transport.KAFKA,
+      options: {
+        client: {
+          brokers: ['localhost:9092'],
+        },
+        consumer: {
+          groupId: 'auth-service-group',
+        },
+      },
+    },
+  );
+
   await app.startAllMicroservices();
+  await kafkaClient.listen();
   await app.listen(3002);
 
   console.log('Auth microservice is running on port 3002...');

@@ -25,9 +25,13 @@
 - &check; Testes unitários - KnightsService
 - &check; Testes unitários - HeroesService
 - &check; Testes unitários - KnightsCalculationProvider
-- &#x2610; Criar AuthService
+- &check; Criar AuthService microservice
+- &check; Criar LoggerService microservice
+- &check; Conectar AuthService a LoggerService
+- &check; Conectar LoggerService a AuthLog (dotnet)
+- &check; Caso knight não tenha armas, não calcular ataque
 - &#x2610; Decidir em uma estratégia para reduzir latencia de chamados ao AuthService (otimizar com caching talvez)
-- &#x2610; Containerizar AuthService
+- &#x2610; Containerizar AuthService e LoggerService
 - &#x2610; Documentar rotas com swagger
 - &#x2610; Refatorar os stubs. Estão um pouco confusos e tem duplicatas 
 - &#x2610; Testes e2e
