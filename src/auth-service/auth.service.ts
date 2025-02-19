@@ -1,9 +1,4 @@
-import {
-  Inject,
-  Injectable,
-  InternalServerErrorException,
-  UnauthorizedException,
-} from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { ClientKafka, ClientProxy, RpcException } from '@nestjs/microservices';
 import { firstValueFrom } from 'rxjs';
@@ -20,8 +15,8 @@ export class AuthService {
 
   async validateToken(token: string) {
     try {
-      const decoded = this.jwtService.decode(token);
-      return { valid: true, decoded };
+      const verified = this.jwtService.verify(token);
+      return { valid: true, verified };
     } catch {
       return { valid: false, error: 'invalid token' };
     }
@@ -81,8 +76,11 @@ export class AuthService {
         ipAddress: ipAddress,
         userAgent: headers['user-agent'],
       });
+
+      const token = await this.jwtService.signAsync(payload);
+      console.log('Generated token: ', token);
       return {
-        access_token: await this.jwtService.signAsync(payload),
+        access_token: token,
       };
     } catch (error) {
       if (error instanceof RpcException) {

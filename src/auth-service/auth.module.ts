@@ -36,7 +36,7 @@ console.log('process.env.JWT_SECRET: ', process.env.JWT_SECRET);
     JwtModule.registerAsync({
       useFactory: () => ({
         secret: process.env.JWT_SECRET || 'default_secret',
-        signOptions: { expiresIn: '10s' },
+        signOptions: { expiresIn: '600s' },
       }),
     }),
   ],

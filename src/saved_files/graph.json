@@ -45,7 +45,7 @@
         "transient": false,
         "exported": true,
         "token": "DatabaseConnection",
-        "initTime": 35.332680999999866
+        "initTime": 44.440176000000065
       }
     },
     "203550704": {
@@ -61,7 +61,7 @@
         "transient": false,
         "exported": true,
         "token": "ExternalContextCreator",
-        "initTime": 22.855759000000035
+        "initTime": 31.570633000000043
       }
     },
     "208334701": {
@@ -104,7 +104,7 @@
         "transient": false,
         "exported": false,
         "token": "InternalCoreModule",
-        "initTime": 23.431582000000162
+        "initTime": 32.295863000000054
       }
     },
     "233936880": {
@@ -120,7 +120,7 @@
         "transient": false,
         "exported": false,
         "token": "AppController",
-        "initTime": 0.9265389999998206
+        "initTime": 0.9993420000000697
       }
     },
     "264711474": {
@@ -137,7 +137,7 @@
         "transient": false,
         "exported": false,
         "token": "MongooseModule",
-        "initTime": 22.723752999999988
+        "initTime": 31.330922999999984
       }
     },
     "303302557": {
@@ -189,7 +189,7 @@
         "transient": false,
         "exported": true,
         "token": "Reflector",
-        "initTime": 23.293476000000055
+        "initTime": 32.16175799999996
       }
     },
     "699745446": {
@@ -257,7 +257,7 @@
         "transient": false,
         "exported": true,
         "token": "Symbol(CONFIG_SERVICE)",
-        "initTime": 23.353679000000056
+        "initTime": 31.9940509999999
       }
     },
     "953630632": {
@@ -274,7 +274,7 @@
         "transient": false,
         "exported": false,
         "token": "HeroesModule",
-        "initTime": 21.981622000000016
+        "initTime": 30.30817900000011
       }
     },
     "981404832": {
@@ -307,7 +307,7 @@
         "transient": false,
         "exported": false,
         "token": "MongooseModule",
-        "initTime": 21.995722999999998
+        "initTime": 30.336581000000024
       }
     },
     "984659045": {
@@ -324,7 +324,7 @@
         "transient": false,
         "exported": false,
         "token": "MongooseModule",
-        "initTime": 21.908018999999967
+        "initTime": 29.987566000000015
       }
     },
     "1063746662": {
@@ -340,7 +340,7 @@
         "transient": false,
         "exported": true,
         "token": "CONFIGURATION_TOKEN",
-        "initTime": 22.14842900000008
+        "initTime": 30.612493000000086
       }
     },
     "1434456218": {
@@ -357,7 +357,7 @@
         "transient": false,
         "exported": true,
         "token": "Reflector",
-        "initTime": 24.473027000000002
+        "initTime": 33.48871400000007
       }
     },
     "1443316584": {
@@ -373,7 +373,7 @@
         "transient": false,
         "exported": true,
         "token": "HeroModel",
-        "initTime": 44.06074699999999
+        "initTime": 49.854404999999815
       }
     },
     "1499494248": {
@@ -389,7 +389,7 @@
         "transient": false,
         "exported": false,
         "token": "KnightsCalculationProvider",
-        "initTime": 21.916319000000158
+        "initTime": 30.00956700000006
       }
     },
     "1544985728": {
@@ -406,7 +406,7 @@
         "transient": false,
         "exported": false,
         "token": "ClientsModule",
-        "initTime": 22.13612799999987
+        "initTime": 30.598191999999926
       }
     },
     "1690574933": {
@@ -481,7 +481,7 @@
         "transient": false,
         "exported": false,
         "token": "ConfigModule",
-        "initTime": 22.541646000000128
+        "initTime": 31.09781299999986
       }
     },
     "1787828844": {
@@ -498,7 +498,7 @@
         "transient": false,
         "exported": false,
         "token": "ConfigHostModule",
-        "initTime": 22.16623000000004
+        "initTime": 30.646294000000125
       }
     },
     "1861393510": {
@@ -530,7 +530,7 @@
         "transient": false,
         "exported": false,
         "token": "KnightsService",
-        "initTime": 45.56361000000015
+        "initTime": 51.51107499999989
       }
     },
     "1919157847": {
@@ -547,7 +547,7 @@
         "transient": false,
         "exported": true,
         "token": "REQUEST",
-        "initTime": 22.54254600000013
+        "initTime": 30.741298000000143
       }
     },
     "1959339810": {
@@ -644,7 +644,7 @@
         "transient": true,
         "exported": true,
         "token": "INQUIRER",
-        "initTime": 22.537045000000035
+        "initTime": 30.746097999999847
       }
     },
     "-26938366": {
@@ -660,7 +660,7 @@
         "transient": false,
         "exported": true,
         "token": "ModulesContainer",
-        "initTime": 22.782555000000002
+        "initTime": 31.45692800000006
       }
     },
     "-326832201": {
@@ -676,7 +676,7 @@
         "transient": false,
         "exported": true,
         "token": "HttpAdapterHost",
-        "initTime": 22.766354999999976
+        "initTime": 31.43082699999991
       }
     },
     "-702581189": {
@@ -692,7 +692,7 @@
         "transient": false,
         "exported": true,
         "token": "LazyModuleLoader",
-        "initTime": 22.764053999999987
+        "initTime": 31.42182700000012
       }
     },
     "-1904419534": {
@@ -708,7 +708,7 @@
         "transient": false,
         "exported": true,
         "token": "SerializedGraph",
-        "initTime": 22.75865399999998
+        "initTime": 31.413925999999947
       }
     },
     "-19112576": {
@@ -735,7 +735,7 @@
         "transient": false,
         "exported": false,
         "token": "AppModule",
-        "initTime": 22.75025400000004
+        "initTime": 31.39362499999993
       }
     },
     "-71302842": {
@@ -783,7 +783,7 @@
         "transient": false,
         "exported": false,
         "token": "AppService",
-        "initTime": 22.735652999999957
+        "initTime": 31.355823999999984
       }
     },
     "-572011637": {
@@ -826,7 +826,7 @@
         "transient": false,
         "exported": false,
         "token": "MongooseCoreModule",
-        "initTime": 22.867059000000154
+        "initTime": 31.481029000000035
       }
     },
     "-503631789": {
@@ -842,7 +842,7 @@
         "transient": false,
         "exported": true,
         "token": "ConfigService",
-        "initTime": 23.996505999999954
+        "initTime": 32.656377999999904
       }
     },
     "-1711617994": {
@@ -875,7 +875,7 @@
         "transient": false,
         "exported": false,
         "token": "KnightsModule",
-        "initTime": 22.118726999999808
+        "initTime": 30.56819100000007
       }
     },
     "-18958741": {
@@ -907,7 +907,7 @@
         "transient": false,
         "exported": false,
         "token": "KnightsCalculationProvider",
-        "initTime": 22.02482299999997
+        "initTime": 30.36178199999995
       }
     },
     "-254366448": {
@@ -923,7 +923,7 @@
         "transient": false,
         "exported": false,
         "token": "KnightsController",
-        "initTime": 0.12290499999994609
+        "initTime": 0.09800500000005741
       }
     },
     "-1854488872": {
@@ -965,7 +965,7 @@
         "transient": false,
         "exported": true,
         "token": "KnightModel",
-        "initTime": 44.19975299999987
+        "initTime": 50.21741999999995
       }
     },
     "-1636720575": {
@@ -1007,7 +1007,7 @@
         "transient": false,
         "exported": true,
         "token": "HeroesService",
-        "initTime": 44.91648400000008
+        "initTime": 50.586136000000124
       }
     },
     "-1854488871": {

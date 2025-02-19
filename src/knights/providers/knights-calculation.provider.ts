@@ -13,8 +13,8 @@ export class KnightsCalculationProvider {
   }
 
   calculateAttack(knight: Knight) {
-    console.log('------------------knight--------------');
-    console.log('knight: ', knight);
+    // console.log('------------------knight--------------');
+    // console.log('knight: ', knight);
     const keyAttr: string = knight.keyAttribute;
     const keyAttrValue: number = knight.attributes[keyAttr];
 

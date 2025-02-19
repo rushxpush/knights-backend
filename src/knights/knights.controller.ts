@@ -24,8 +24,8 @@ export class KnightsController {
 
   @MessagePattern('get_knights')
   findAll(@Payload('filter') filter?: string) {
-    console.log('filter: ', filter === 'heroes');
-    console.log('get knights');
+    // console.log('filter: ', filter === 'heroes');
+    // console.log('get knights');
     if (filter === 'heroes') {
       return this.knightsService.findAllHeroes();
     }
@@ -46,7 +46,7 @@ export class KnightsController {
       updateKnightDto: UpdateKnightDto;
     },
   ) {
-    console.log('payload: ', payload);
+    // console.log('payload: ', payload);
     return this.knightsService.update(payload._id, payload.updateKnightDto);
   }
 
